@@ -1,0 +1,156 @@
+@import "tailwindcss";
+@import "@fontsource/archivo-black";
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/jetbrains-mono";
+
+@theme {
+  --color-lime: #bce84f;
+  --color-ink: #111111;
+  --color-paper: #fff9f0;
+  --color-sun: #ffd43b;
+  --color-grape: #7b6cff;
+  --color-bubble: #ff90e8;
+  --color-alarm: #ff4b33;
+  --color-mint: #6ee7a0;
+
+  --font-display: "Archivo Black", sans-serif;
+  --font-sans: "Space Grotesk Variable", sans-serif;
+  --font-mono: "JetBrains Mono Variable", monospace;
+
+  --shadow-brut: 6px 6px 0 0 #111111;
+  --shadow-brut-sm: 3px 3px 0 0 #111111;
+  --shadow-brut-lg: 10px 10px 0 0 #111111;
+
+  --animate-marquee: marquee 22s linear infinite;
+  --animate-spin-slow: spin 24s linear infinite;
+  --animate-float: float 16s ease-in-out infinite alternate;
+  --animate-float-late: float 22s ease-in-out 3s infinite alternate-reverse;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes float {
+    from {
+      transform: translateY(0) rotate(-6deg);
+    }
+    to {
+      transform: translateY(-42px) rotate(10deg);
+    }
+  }
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background: var(--color-lime);
+    color: var(--color-ink);
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-lime);
+  }
+}
+
+@layer components {
+  /* Card with thick border + hard offset shadow */
+  .brut-card {
+    background: var(--color-paper);
+    border: 3px solid var(--color-ink);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-brut);
+  }
+
+  /* Chunky button: shadow collapses on press */
+  .brut-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--color-sun);
+    border: 3px solid var(--color-ink);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-brut-sm);
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    padding: 0.7rem 1.4rem;
+    cursor: pointer;
+    transition:
+      transform 0.1s ease,
+      box-shadow 0.1s ease;
+  }
+  .brut-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 var(--color-ink);
+  }
+  .brut-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0 0 0 0 var(--color-ink);
+  }
+  .brut-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: var(--shadow-brut-sm);
+  }
+  .brut-btn:focus-visible,
+  .brut-input:focus-visible,
+  a:focus-visible {
+    outline: 3px dashed var(--color-ink);
+    outline-offset: 3px;
+  }
+
+  .brut-input {
+    width: 100%;
+    background: var(--color-paper);
+    border: 3px solid var(--color-ink);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-brut-sm);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+  .brut-input::placeholder {
+    color: color-mix(in srgb, var(--color-ink) 40%, transparent);
+  }
+
+  /* Uppercase mono micro-label */
+  .brut-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+
+  /* Rotated sticker chip */
+  .brut-chip {
+    display: inline-block;
+    border: 3px solid var(--color-ink);
+    border-radius: 999px;
+    padding: 0.3rem 0.9rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-brut-sm);
+    background: var(--color-paper);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
