@@ -68,7 +68,7 @@ function App({ createWorker }: AppProps) {
         <div className="border-grape animate-float absolute bottom-24 -left-14 size-36 rounded-full border-8 opacity-70 sm:size-52" />
         <svg
           viewBox="0 0 100 100"
-          className="text-bubble animate-float-late absolute -right-20 bottom-4 w-52 opacity-80 sm:w-80"
+          className="text-lime animate-float-late absolute -right-20 bottom-4 w-52 opacity-80 sm:w-80"
         >
           <path
             d="M5 55 Q 25 95 50 55 T 95 60"
@@ -117,7 +117,7 @@ function App({ createWorker }: AppProps) {
             Drop file.
             <br />
             <span
-              className="text-lime"
+              className="text-bubble"
               style={{ WebkitTextStroke: "3px #111111" }}
             >
               Get hash.

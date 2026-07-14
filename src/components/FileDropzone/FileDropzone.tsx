@@ -67,7 +67,7 @@ export function FileDropzone({ onFileSelect, disabled }: FileDropzoneProps) {
         >
           <polygon
             points="32,2 39,15 53,9 49,24 64,26 53,36 62,49 47,47 44,62 32,51 20,62 17,47 2,49 11,36 0,26 15,24 11,9 25,15"
-            className="fill-bubble stroke-ink"
+            className="fill-lime stroke-ink"
             strokeWidth="2.5"
           />
         </svg>

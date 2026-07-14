@@ -48,13 +48,13 @@
 @layer base {
   html {
     font-family: var(--font-sans);
-    background: var(--color-lime);
+    background: var(--color-bubble);
     color: var(--color-ink);
   }
 
   ::selection {
     background: var(--color-ink);
-    color: var(--color-lime);
+    color: var(--color-bubble);
   }
 }
 
