@@ -40,7 +40,7 @@ export function FileDropzone({ onFileSelect, disabled }: FileDropzoneProps) {
   return (
     <div
       className={cn(
-        "brut-card relative grid gap-5 border-dashed p-10 text-center transition-colors sm:p-14",
+        "brut-card relative grid gap-4 border-dashed p-7 pt-10 text-center transition-colors sm:gap-5 sm:p-14",
         isDragOver && "bg-sun",
       )}
       role="region"
@@ -59,7 +59,7 @@ export function FileDropzone({ onFileSelect, disabled }: FileDropzoneProps) {
 
       <div
         aria-hidden="true"
-        className="absolute -top-9 -right-7 size-24 sm:-top-11 sm:-right-10 sm:size-28"
+        className="absolute -top-10 -right-2 size-20 sm:-top-11 sm:-right-10 sm:size-28"
       >
         <svg
           viewBox="0 0 64 64"
@@ -78,7 +78,7 @@ export function FileDropzone({ onFileSelect, disabled }: FileDropzoneProps) {
         </span>
       </div>
 
-      <p className="font-display text-2xl uppercase sm:text-3xl">
+      <p className="font-display text-xl uppercase sm:text-3xl">
         Drag a file here
       </p>
       <p className="brut-label">any type · any size · never uploaded</p>

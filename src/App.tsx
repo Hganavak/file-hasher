@@ -39,12 +39,12 @@ function App({ createWorker }: AppProps) {
   const [expectedHash, setExpectedHash] = useState("");
 
   return (
-    <div className="relative min-h-dvh overflow-x-clip">
+    <div className="relative flex min-h-dvh flex-col overflow-x-clip">
       {/* Drifting background shapes */}
       <div aria-hidden="true" className="fixed inset-0 -z-10">
         <svg
           viewBox="0 0 100 100"
-          className="text-grape animate-float absolute -top-10 -left-16 w-72 opacity-80"
+          className="text-grape animate-float absolute -top-10 -left-16 w-48 opacity-80 sm:w-72"
         >
           <path
             d="M10 70 Q 30 10 55 45 T 95 40"
@@ -56,7 +56,7 @@ function App({ createWorker }: AppProps) {
         </svg>
         <svg
           viewBox="0 0 64 64"
-          className="text-grape animate-float-late absolute top-1/4 -right-10 w-44 opacity-75"
+          className="text-grape animate-float-late absolute top-1/4 -right-10 w-28 opacity-75 sm:w-44"
         >
           <path
             d="M32 6 V58 M6 32 H58 M13 13 L51 51 M51 13 L13 51"
@@ -65,10 +65,10 @@ function App({ createWorker }: AppProps) {
             strokeLinecap="round"
           />
         </svg>
-        <div className="border-grape animate-float absolute bottom-24 -left-14 size-52 rounded-full border-8 opacity-70" />
+        <div className="border-grape animate-float absolute bottom-24 -left-14 size-36 rounded-full border-8 opacity-70 sm:size-52" />
         <svg
           viewBox="0 0 100 100"
-          className="text-bubble animate-float-late absolute -right-20 bottom-4 w-80 opacity-80"
+          className="text-bubble animate-float-late absolute -right-20 bottom-4 w-52 opacity-80 sm:w-80"
         >
           <path
             d="M5 55 Q 25 95 50 55 T 95 60"
@@ -123,7 +123,7 @@ function App({ createWorker }: AppProps) {
               Get hash.
             </span>
           </h1>
-          <p className="mx-auto max-w-xl text-lg font-medium text-balance">
+          <p className="mx-auto max-w-xl font-medium text-balance sm:text-lg">
             SHA-256 for files of any size, computed entirely in your browser.
             Your file never leaves your machine — there is no server to send it
             to.
@@ -174,7 +174,7 @@ function App({ createWorker }: AppProps) {
         </section>
       </main>
 
-      <footer className="border-ink bg-ink text-paper border-t-3">
+      <footer className="border-ink bg-ink text-paper mt-auto border-t-3">
         <div className="mx-auto flex w-full max-w-3xl flex-wrap items-center justify-between gap-3 px-5 py-6">
           <p className="brut-label text-paper">
             Built by{" "}
