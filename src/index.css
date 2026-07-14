@@ -21,7 +21,7 @@
   --shadow-brut-sm: 3px 3px 0 0 #111111;
   --shadow-brut-lg: 10px 10px 0 0 #111111;
 
-  --animate-marquee: marquee 22s linear infinite;
+  --animate-marquee: marquee 44s linear infinite;
   --animate-spin-slow: spin 24s linear infinite;
   --animate-float: float 10s ease-in-out infinite alternate;
   --animate-float-late: float 14s ease-in-out 2s infinite alternate-reverse;

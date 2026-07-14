@@ -18,7 +18,7 @@ const BLURBS = [
     color: "bg-sun",
     tilt: "-rotate-1",
     title: "Nothing gets uploaded",
-    body: "Your file is read straight from disk with the File API. Not a single byte of it goes over the network — kill your Wi-Fi mid-hash and it keeps going.",
+    body: "Your file is read straight from disk with the File API. Not a single byte of it goes over the network — open devtools and watch: zero requests.",
   },
   {
     color: "bg-bubble",
@@ -126,7 +126,7 @@ function App({ createWorker }: AppProps) {
           <p className="mx-auto max-w-xl font-medium text-balance sm:text-lg">
             SHA-256 for files of any size, computed entirely in your browser.
             Your file never leaves your machine — there is no server to send it
-            to.
+            to. Don't believe us? Turn off your Wi-Fi and try.
           </p>
         </section>
 

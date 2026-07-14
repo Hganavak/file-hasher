@@ -54,27 +54,25 @@ export function HashResult({
         </p>
       )}
 
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <dl className="brut-label grid gap-1 normal-case">
-          <div className="flex gap-2">
-            <dt>File:</dt>
-            <dd className="break-all">{fileName}</dd>
-          </div>
-          <div className="flex gap-2">
-            <dt>Size:</dt>
-            <dd>{formatBytes(fileSize)}</dd>
-          </div>
-        </dl>
-        <button
-          type="button"
-          className="brut-btn"
-          aria-label="Copy hash to clipboard"
-          onClick={handleCopy}
-        >
-          {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
-          {copied ? "Copied" : "Copy hash"}
-        </button>
-      </div>
+      <dl className="brut-label grid gap-1 normal-case">
+        <div className="flex gap-2">
+          <dt>File:</dt>
+          <dd className="break-all">{fileName}</dd>
+        </div>
+        <div className="flex gap-2">
+          <dt>Size:</dt>
+          <dd>{formatBytes(fileSize)}</dd>
+        </div>
+      </dl>
+      <button
+        type="button"
+        className="brut-btn min-w-48 justify-self-start"
+        aria-label="Copy hash to clipboard"
+        onClick={handleCopy}
+      >
+        {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
+        {copied ? "Copied" : "Copy hash"}
+      </button>
     </section>
   );
 }
