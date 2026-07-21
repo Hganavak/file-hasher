@@ -17,6 +17,7 @@
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@fontsource/archivo-black": "^5.2.8",
+    "@storyblok/react": "^7.2.2",
     "@tailwindcss/vite": "^4.3.2",
     "clsx": "^2.1.1",
     "hash-wasm": "^4.12.0",

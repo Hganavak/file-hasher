@@ -1,0 +1,70 @@
+{
+  "_uid": "page-root-0001",
+  "component": "page",
+  "body": [
+    {
+      "_uid": "ticker-0001",
+      "component": "ticker",
+      "text": "No uploads ★ No cloud ★ No tracking ★ SHA-256 ★ Web Worker ★ WASM ★ Works offline ★ "
+    },
+    {
+      "_uid": "header-0001",
+      "component": "site_header",
+      "left_label": "file—hasher",
+      "left_title": "Back to icy.dev",
+      "left_url": "https://icy.dev",
+      "right_label": "by icy.dev ↗",
+      "right_url": "https://icy.dev"
+    },
+    {
+      "_uid": "hero-0001",
+      "component": "hero",
+      "heading_line_1": "Drop file.",
+      "heading_line_2": "Get hash.",
+      "subheading": "SHA-256 for files of any size, computed entirely in your browser. Your file never leaves your machine — there is no server to send it to. Don't believe us? Turn off your Wi-Fi and try."
+    },
+    {
+      "_uid": "hashtool-0001",
+      "component": "hash_tool"
+    },
+    {
+      "_uid": "featuregrid-0001",
+      "component": "feature_grid",
+      "features": [
+        {
+          "_uid": "feature-0001",
+          "component": "feature",
+          "title": "Nothing gets uploaded",
+          "body": "Your file is read straight from disk with the File API. Not a single byte of it goes over the network — open devtools and watch: zero requests.",
+          "color": "sun",
+          "tilt": "left"
+        },
+        {
+          "_uid": "feature-0002",
+          "component": "feature",
+          "title": "Big files, flat memory",
+          "body": "The file streams through a WASM hasher in 8 MB chunks, so memory stays flat whether it's 8 KB or 10 GB. Verified against shasum on a 10 GB file.",
+          "color": "bubble",
+          "tilt": "right"
+        },
+        {
+          "_uid": "feature-0003",
+          "component": "feature",
+          "title": "The page never freezes",
+          "body": "Hashing runs in a Web Worker, off the main thread. Scroll, type, paste a checksum — the UI stays butter while the worker crunches.",
+          "color": "grape",
+          "tilt": "left"
+        }
+      ]
+    },
+    {
+      "_uid": "footer-0001",
+      "component": "site_footer",
+      "credit_prefix": "Built by ",
+      "credit_label": "icy.dev",
+      "credit_url": "https://icy.dev",
+      "source_label": "source ↗",
+      "source_url": "https://github.com/Hganavak/file-hasher"
+    }
+  ]
+}

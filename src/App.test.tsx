@@ -1,7 +1,18 @@
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createFakeWorkerFactory } from "@/test/fakeWorker";
+import { homeContent } from "@/storyblok/seed/homeContent";
 import App from "./App";
+
+// Serve the canonical seed content instead of hitting the Storyblok API, so the
+// app renders exactly the content that seeds the CMS.
+vi.mock("@storyblok/react", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@storyblok/react")>();
+  return {
+    ...actual,
+    useStoryblok: () => ({ content: homeContent }),
+  };
+});
 
 const SHA256_ABC =
   "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad";

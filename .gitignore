@@ -25,3 +25,11 @@ dist-ssr
 
 # Local tooling
 .claude/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# MCP config contains a secret token
+.cursor/mcp.json
